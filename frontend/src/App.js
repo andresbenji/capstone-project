@@ -1,8 +1,23 @@
-import logo from './logo.svg';
+import Footer from './footer.jsx';
 import './App.css';
+import './components/footer.css'
 
-function App() {
+const App = () => {
+
   return (
+
+   <>
+   <Router >
+   <Header />
+    <Routes>
+          <Route path="/home" element={<Footer/>} />
+          {/* { <Route path="/products" element={<ProductList/>} /> } */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
+    </Routes>
+  <Footer />
+  </Router>
+   </>
+
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,6 +35,7 @@ function App() {
       </header>
     </div>
   );
-}
+};
+
 
 export default App;
